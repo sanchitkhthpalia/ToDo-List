@@ -1,0 +1,161 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  h2 {
+    margin-top: 30px;
+    font-size: 24px;
+  }
+  
+  /* ToDo List Styles */
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  input[type="text"],
+  button,
+  select {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+  }
+  
+  button {
+    background-color: #ff6f61;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #f1544e;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+    position: relative;
+  }
+  
+  li:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  span {
+    flex: 1;
+  }
+  
+  /* Strikethrough completed tasks */
+  li.completed span {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  /* Segmented Lists */
+  ul.Personal-tasks {
+    background-color: #f0f5f9;
+  }
+  
+  ul.Professional-tasks {
+    background-color: #ffdc73;
+  }
+  
+  /* Decorative Styles */
+  body {
+    background-image: radial-gradient(#f2f2f2 5%, transparent 5%), radial-gradient(#f2f2f2 5%, transparent 5%);
+    background-position: 0 0, 25px 25px;
+    background-size: 50px 50px;
+  }
+  
+  h1 {
+    color: #ff6f61;
+  }
+  
+  button {
+    background-image: linear-gradient(to right, #ff6f61, #f1544e);
+  }
+  
+  ul.Personal-tasks {
+    border-top: 4px solid #ff6f61;
+  }
+  
+  ul.Professional-tasks {
+    border-top: 4px solid #f1544e;
+  }
+  
+  li.completed {
+    background-color: #e6e6e6;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  li.new-task {
+    animation: fadeIn 0.5s;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    h1 {
+      font-size: 28px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    input[type="text"],
+    button,
+    select {
+      padding: 8px;
+      font-size: 14px;
+    }
+  
+    li {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }

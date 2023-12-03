@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ToDo List</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>ToDo List</h1>
+
+  <!-- Task Creation Form -->
+  <form action="/create" method="post">
+    <input type="text" name="task" placeholder="Enter task description" required>
+    <select name="listType">
+      <option value="Personal">Personal</option>
+      <option value="Professional">Professional</option>
+    </select>
+    <button type="submit">Create</button>
+  </form>
+
+  <!-- Day's Tasks -->
+  <h2>Personal's Tasks</h2>
+  <ul>
+    <% tasks.Personal.forEach((task) => { %>
+      <li>
+        <span><%= task %></span>
+        <form action="/complete" method="post" style="display: inline;">
+          <input type="hidden" name="completedTask" value="<%= task %>">
+          <input type="hidden" name="listType" value="Personal">
+          <button type="submit">Complete</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+
+  <!-- Work Tasks -->
+  <h2>Professional Tasks</h2>
+  <ul>
+    <% tasks.Professional.forEach((task) => { %>
+      <li>
+        <span><%= task %></span>
+        <form action="/complete" method="post" style="display: inline;">
+          <input type="hidden" name="completedTask" value="<%= task %>">
+          <input type="hidden" name="listType" value="Professional">
+          <button type="submit">Complete</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+
+</body>
+</html>
